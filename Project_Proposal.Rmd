@@ -1,0 +1,35 @@
+---
+title: "Project Proposal"
+output: html_document
+date: "2025-11-10"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Discord link: https://discord.gg/puypf8r4
+
+Github: https://github.com/TheSearch11/Stat-240---Final-Project
+
+Group Members: Matt, Youjin, Jichen, and Kevin
+
+Meeting Mondays at 6 pm, on Discord to share documents and call to connect.
+
+Question of Interest: 
+
+Links to Data:
+DoJ data: https://www.wisdoj.gov/Pages/DataAndStatistics/ucr-dashboards.aspx 
+
+Description:
+
+Outline of a graph:
+Describe what variables you will include and what type of graph you will create.
+You do not have to create the graph just yet; only a description is required.
+
+Type of Inference Method:
+Inference on a single population proportion or difference of two population proportions.
+Inference on a single population mean or difference of two population means.
+Simple linear regression.
