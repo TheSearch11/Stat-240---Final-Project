@@ -1,0 +1,26 @@
+---
+title: "Statistics 240 Final Project"
+author: "Matt Peters, Youjin Kim, Jichen Liu, and Kevin Carroll"
+date: "2025-11-17"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = TRUE, message = FALSE,
+                      error = TRUE)
+
+library(tidyverse)
+```
+
+## Introduction
+
+Text
+
+## Data Overview
+
+Text
+
+```{r}
+act <- read_csv("data/act_graduates_certified_2023-24.csv")
+```
+
