@@ -1,7 +1,6 @@
 ---
 title: "Statistics 240 Final Project"
 author: "Matt Peters, Youjin Kim, Jichen Liu, and Kevin Carroll"
-date: "2025-11-17"
 output: html_document
 ---
 
@@ -22,5 +21,20 @@ Text
 
 ```{r}
 act <- read_csv("data/act_graduates_certified_2023-24.csv")
+
+act |>
+  filter(GROUP_BY_VALUE == "Econ Disadv" | GROUP_BY_VALUE == "Not Econ Disadv",
+         GRADE_GROUP == "[All]",
+         DISTRICT_CODE != "0000",
+         TEST_SUBJECT == "Composite" | TEST_SUBJECT == "Writing") |>
+  select(c(DISTRICT_CODE, DISTRICT_NAME, GROUP_BY_VALUE, STUDENT_COUNT, TEST_SUBJECT, AVERAGE_SCORE)) |> 
+  rename(dist_code = `DISTRICT_CODE`,
+         dist_name = `DISTRICT_NAME`,
+         econ_status = GROUP_BY_VALUE,
+         count = STUDENT_COUNT,
+         test = TEST_SUBJECT,
+         avg_score = AVERAGE_SCORE) |> 
+  mutate(across(c(count, avg_score), as.numeric))
 ```
+
 
